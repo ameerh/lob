@@ -30,6 +30,7 @@ angular.module('Ctrl', ['ngMaterial', 'schemaForm','ngFileUpload']).controller('
                             .content(data.message)
                             .action('OK')
                             .highlightAction(false)
+                            .hideDelay(6000)
                         $mdToast.show(toast);
                     }
                     else{
@@ -37,6 +38,8 @@ angular.module('Ctrl', ['ngMaterial', 'schemaForm','ngFileUpload']).controller('
                             .content("Successfully Submitted. Wait A Few Seconds Before Images Display")
                             .action('OK')
                             .highlightAction(false)
+                            .hideDelay(6000)
+
                         $mdToast.show(toast);
                     }
 
