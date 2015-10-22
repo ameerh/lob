@@ -1,0 +1,83 @@
+
+<md-toolbar id="partner-wraper" ng-style="{'background-color': branding.backgroundColor, 'color': branding.fontColor}" layout="row" layout-align="start center" class="toolbar">
+    <div class="md-toolbar-tools" hide-gt-md>
+        <md-button ng-click="toggleLeft()"><img ng-if="branding.fontColor == 'black' " class="sidenav-icon" src="../images/menu_black.png" width = 20px; height="20px;" >
+            <img ng-if="fontColor != 'black' " class="sidenav-icon" src="../images/menu.png" width = 20px; height="20px;" >
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content class="md-padding">
+    <div style="height:100px;">
+        <a href="/splash">
+            <img height="75" style="max-width:220px" src="/images/ic_device_black.png">
+
+        </a>
+    </div>
+
+    <div class="right-nav-list-font">
+        <md-divider class="left-nav-divider"></md-divider>
+        <div><h2 class="left-card-label">Manage</h2></div>
+
+        <a href="/general" class="right-nav-element" layout="row">
+            <div flex="20" offset="5">
+                <img src="/images/ic_device_black.png" hieght="20" width="20" >
+            </div>
+            <div flex >
+                <h3 class="left-card-heading"> General</h3>
+            </div>
+        </a>
+        <a href="/general" class="right-nav-element" layout="row" >
+            <div flex="20" offset="5">
+                <img src="../../../images/ic_device_type_black.png" hieght="20" width="20" >
+            </div>
+            <div flex>
+                <h3 class="left-card-heading"> General </h3>
+            </div>
+        </a>
+        <a href="/general" class="right-nav-element" layout="row" >
+            <div flex="20" offset="5">
+                <img src="../../../images/ic_asset_black.png" hieght="20" width="20" >
+            </div>
+            <div flex>
+                <h3 class="left-card-heading"> General</h3>
+            </div>
+        </a>
+        <a href="/general" class="right-nav-element" layout="row" >
+            <div flex="20" offset="5">
+                <img src="../../../images/ic_assettype_black.png" hieght="20" width="20" >
+            </div>
+            <div flex>
+               <h3 class="left-card-heading"> General</h3>
+               </div>
+        </a>
+            <a href="/general" class="right-nav-element" layout="row" >
+                <div flex="20" offset="5">
+                    <img src="../images/settings.png" hieght="20" width="20" >
+                </div>
+                <div flex>
+                    <h3 class="left-card-heading">General</h3>
+                </div>
+            </a>
+
+            <a href="/general" class="right-nav-element" layout="row" >
+                <div flex="20" offset="5">
+                    <img src="../../../images/ic_customers_black.png" hieght="20" width="20" >
+                </div>
+                <div flex>
+                    <h3 class="left-card-heading"> General</h3>
+                </div>
+            </a>
+        <md-divider class="left-nav-divider"></md-divider>
+        <div><h2 class="left-card-label">My Account</h2></div>
+        <a href="/" class="right-nav-element" layout="row">
+            <div flex="20" offset="5">
+                <img src="../../../images/ic_logout_black.png" hieght="20" width="20" >
+            </div>
+            <div flex>
+                <h3 class="left-card-heading">Log out</h3>
+            </div>
+        </a>
+
+    </div>
+
+</md-content>

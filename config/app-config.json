@@ -1,0 +1,22 @@
+{
+  "port": 8080,
+  "portOnline" : 80,
+  "db": {
+    "url" : "127.0.0.1:8091",
+    "bucket" : "platform",
+    "password" : "12345678"
+  },
+  "dbOnline" : {
+    "url" : "url",
+    "bucket" : "bucket",
+    "password" : "abcded"
+  },
+  "logging": {
+    "logPath": "/var/log/boilerplate",
+    "agenda": {
+      "debug": "/var/log/boilerplate/debug.log",
+      "error": "/var/log/boilerplate/error.log",
+      "info": "/var/log/boilerplate/info.log"
+    }
+  }
+}

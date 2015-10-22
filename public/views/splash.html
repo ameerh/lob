@@ -1,0 +1,60 @@
+<div id="partner-header" class="row">
+    <md-toolbar id="portal-wraper" ng-style="{'background-color': branding.backgroundColor, 'color': branding.fontColor}" layout="row"  layout-sm="column" layout-wrap >
+        <div  flex="100" flex-sm="100" layout="row"  layout-align="center">
+
+            <img class="logo" ng-src="{{branding.img}}" height="72" style="max-width: 400px;">
+
+        </div>
+    </md-toolbar>
+</div>
+
+<div id="middle-cards-container"  flex="100" >
+
+    <div layout="row" >
+        <md-subheader id="card-headers">MANAGE</md-subheader>
+    </div>
+    <div class="card-divs" layout="row" layout-sm="column" layout-md="column" flex="100" layout-margin>
+
+        <a href="/general" class="main-content-link"   flex layout="row">
+            <md-button  ng-style="{'background-color': branding.backgroundColor, 'color': branding.fontColor}" class="md-raised splash-btn" flex >
+                <img ng-if="branding.fontColor == 'black'" class="splash-icons" src="../../../images/ic_device_black.png" height="40"/>
+                <img ng-if="branding.fontColor != 'black'" class="splash-icons" src="../../../images/ic_device_white.png" height="40"/>
+                <h1 class="splash-h1" ng-style="{'color': branding.fontColor}">General</h1>
+            </md-button>
+        </a>
+
+        <a href="/general" class="main-content-link"   flex layout="row">
+            <md-button  ng-style="{'background-color': branding.backgroundColor, 'color': branding.fontColor}" class="md-raised splash-btn" flex >
+                <img ng-if="branding.fontColor == 'black'"  class="splash-icons" src="../../../images/ic_asset_black.png" height="40"/>
+                <img ng-if="branding.fontColor != 'black'"  class="splash-icons" src="../../../images/ic_asset_white.png" height="40"/>
+                <h1 class="splash-h1" ng-style="{'color': branding.fontColor}">General</h1>
+            </md-button>
+        </a>
+
+        <a href="/general" class="main-content-link"   flex layout="row">
+            <md-button  ng-style="{'background-color': branding.backgroundColor, 'color': branding.fontColor}" class="md-raised splash-btn" flex >
+                <img ng-if="branding.fontColor == 'black'"  class="splash-icons" src="../../../images/ic_customers_black.png" height="40"/>
+                <img ng-if="branding.fontColor != 'black'"  class="splash-icons" src="../../../images/ic_customers_white.png" height="40"/>
+                <h1 class="splash-h1" ng-style="{'color': branding.fontColor}">General</h1>
+            </md-button>
+        </a>
+    </div>
+
+    <div layout="row" >
+        <md-subheader id="card-headers" >ACCOUNT</md-subheader>
+    </div>
+    <div class="card-divs" layout="row" layout-sm="column" layout-md="column" flex="100" layout-margin>
+
+        <a href="/" class="main-content-link"   flex layout="row">
+            <md-button  ng-style="{'background-color': branding.backgroundColor, 'color': branding.fontColor}" class="md-raised splash-btn" flex >
+                <img ng-if="branding.fontColor == 'black'" class="splash-icons" src="../../../images/ic_logout_black.png" height="40"/>
+                <img ng-if="branding.fontColor != 'black'" class="splash-icons" src="../../../images/ic_logout_white.png" height="40"/>
+                <h1 class="splash-h1" ng-style="{'color': branding.fontColor}">Logout</h1>
+            </md-button>
+        </a>
+        <a flex layout="row">
+        </a>
+        <a flex layout="row">
+        </a>
+    </div>
+</div>

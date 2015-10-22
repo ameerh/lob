@@ -1,0 +1,27 @@
+<md-dialog aria-label="Create Dialog" layout-padding>
+    <div style="width:400px;overflow-x:scroll" >
+        <h3>Create</h3>
+        <form  layout="row" >
+            <md-dialog-content class="sticky-container" flex >
+                <md-input-container>
+                    <label></label>
+                    <md-select ng-model="object" name="object" required placeholder="Choose Object Type">
+                        <md-optgroup label="Object Types">
+                            <md-option ng-value="ot" ng-repeat="ot in objectTypesOption">{{ot.name}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </md-input-container>
+            </md-dialog-content>
+        </form>
+        <md-button class="md-raised md-primary" ng-click="create()" >
+            Create
+        </md-button>
+    </div>
+    <div class="md-actions" layout="row">
+        <span flex></span>
+        <md-button ng-click="close()" class="md-primary">
+            Close
+        </md-button>
+    </div>
+</md-dialog>
+

@@ -1,0 +1,32 @@
+<md-toolbar id="portal-wraper" ng-style="{'background-color': 'black', 'color': 'white'}" layout="row"  layout-sm="column" layout-wrap >
+    <div  flex="100"  layout="row"  layout-align="center">
+        <h1 ><img src="/images/ic_asset_white.png" height="40"> Portal </h1>
+    </div>
+</md-toolbar>
+<md-content layout-padding class="autoScroll">
+    <div layout="row" layout-wrap>
+        <div class="signin-div" flex="33" offset-gt-md="33" flex-md="100" flex-sm="100"  flex-xs="100" >
+            <md-card class="md-whiteframe-z5" layout-wrap>
+                <md-card-content layout="row" layout-wrap layout-padding>
+                    <div layout="column" flex >
+                        <form layout="column" flex >
+                            <md-input-container>
+                                <label class="left-margin">Admin/User Email</label>
+                                <md-icon md-svg-src="../../images/ic_email_black.svg" ></md-icon>
+                                <input name="email" type="text" ng-model="signIn.email" style="margin-left:36px">
+                            </md-input-container>
+                            <md-input-container>
+                                <label style="margin-left:36px">Password</label>
+                                <md-icon md-svg-src="../../images/ic_password_black.svg"></md-icon>
+                                <input name="password" type="password" ng-model="signIn.password" style="margin-left:36px">
+                            </md-input-container>
+                            <md-button class="md-raised md-primary" ng-click="signIn()"><span ng-hide="hide">Sign in</span><span ng-show="hide">Signing In ...</span></md-button>
+                        </form>
+
+                    </div>
+                </md-card-content>
+            </md-card>
+
+        </div>
+    </div>
+</md-content>

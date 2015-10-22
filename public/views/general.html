@@ -1,0 +1,49 @@
+
+<section layout="row" flex>
+
+    <md-content flex style="max-height : 700px">
+        <md-toolbar id="portal-wraper" ng-style="{'background-color': branding.backgroundColor, 'color': branding.fontColor}" layout="row" layout-align="start center" class="toolbar">
+            <div flex="15" hide-gt-md >
+                <div class="md-toolbar-tools">
+                    <md-button ng-click="toggleLeft()"><img ng-if="branding.fontColor == 'black' "  src="../../../images/menu_black.png" class="sidenav-icon" width = 20px; height="20px;" >
+                        <img ng-if="branding.fontColor != 'black' "  src="../../../images/menu.png" class="sidenav-icon" width = 20px; height="20px;" ></md-button>
+                </div>
+            </div>
+            <div flex>
+                <h2 class="md-toolbar-tools">
+                    <div class="md-title">
+                        <span>Post</span>
+                        <span style="transform: translate3d(0, 1px, 0)">
+                            <img ng-if="branding.fontColor == 'black'" src="../../../images/breadcrumb_arrow_black.png" height="25px" alt="" aria-hidden="true">       <img ng-if="branding.fontColor != 'black'" src="../../../images/breadcrumb_arrow.png" height="25px" alt="" aria-hidden="true">
+                        </span>
+                        <span>Upload Users Data</span>
+                    </div>
+                </h2>
+            </div>
+            <div flex flex-md="30" flex-sm="10" flex-xs="0">
+            </div>
+            <div flex hide-gt-md>
+                <div class="md-toolbar-tools">
+                    <md-button ng-click="toggleRight()"><img ng-if="branding.fontColor == 'black' " class="sidenav-icon" src="../images/header_arrow_black.png" width = 19px; height="19px;" > <img class="sidenav-icon" ng-if="branding.fontColor != 'black' " src="../images/header_arrow.png" width = 19px; height="19px;" > &nbsp;<span class="right-sidenav-black text-capitalize md-title" ng-style="{color: branding.fontColor}">Filters</span></md-button>
+                </div>
+            </div>
+        </md-toolbar>
+        <div layout="row" layout-wrap class="content-height">
+            <input type="file" id="files" ngf-select ng-model="files" accept=".csv">
+            <md-divider></md-divider>
+            <md-divider></md-divider>
+            <md-button class="md-raised md-primary" ng-disabled="!files"  ng-click="createPostCard()">
+                Assign
+            </md-button>
+
+            <div ng-repeat="postCard in postCards">
+                <img src="{{postCard.thumbnails[0].large}}">
+                <img src="{{postCard.thumbnails[1].large}}">
+            </div>
+        </div>
+
+    </md-content>
+</section>
+
+
+

@@ -1,0 +1,17 @@
+<div>
+    <md-toolbar layout="row" ng-style="{'background-color': branding.backgroundColor, 'color': branding.fontColor}" layout-align="start center" class="toolbar">
+        <md-button hide-gt-md ng-click="toggleRight()">
+            <img class="sidenav-icon" ng-if="branding.fontColor == 'black' " src="../images/header_arrow_black.png" width = 19px; height="19px;" >  <img class="sidenav-icon" ng-if="branding.fontColor != 'black' " src="../images/header_arrow.png" width = 19px; height="19px;" > &nbsp;<span class="right-sidenav-black text-capitalize md-title" ng-style="{color: branding.fontColor}">Filters</span>
+        </md-button>
+    </md-toolbar>
+    <md-content  class="md-padding">
+        <div layout="column">
+
+            <md-input-container flex>
+                <label>Object ID</label>
+                <input ng-model="objectID" ng-change="searchByID()">
+            </md-input-container>
+        </div>
+
+    </md-content>
+</div>

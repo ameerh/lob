@@ -1,0 +1,27 @@
+<md-dialog aria-label="Mango (Fruit)" layout-padding>
+    <div style="width:400px;overflow-x:scroll">
+
+        <h3>Update</h3>
+        <form name="objectForm" sf-schema="schema" sf-form="form" sf-model="model"></form>
+        <form  layout="row" >
+            <md-dialog-content class="sticky-container" flex layout-padding>
+
+                <div>
+                    <md-button class="md-raised md-primary"  ng-click="Update()">
+                        Update
+                    </md-button>
+                    <md-button class="md-raised md-warn md-hue-2"  ng-click="Delete()">
+                        Delete
+                    </md-button>
+                </div>
+            </md-dialog-content>
+        </form>
+    </div>
+    <div class="md-actions" layout="row">
+
+        <span flex></span>
+        <md-button ng-click="close()" class="md-primary">
+            Close
+        </md-button>
+    </div>
+</md-dialog>

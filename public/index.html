@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+        <base href="/">
+
+        <title>PrintItOut</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- custom styles -->
+        <link rel="stylesheet" href="libs/angular-material/angular-material.min.css">
+        <!--<link rel="stylesheet" href="libs/leaflet/dist/leaflet.css">-->
+        <link rel="stylesheet" href="libs/angular-ui-tree/dist/angular-ui-tree.min.css">
+        <link rel="stylesheet" href="custom-libs/color-picker/colorpicker.min.css">
+        <!-- JS -->
+        <script src="libs/angular/angular.min.js"></script>
+
+        <!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
+        <script src="libs/ng-file-upload/ng-file-upload-shim.min.js"></script>
+        <script src="libs/ng-file-upload/ng-file-upload.min.js"></script>
+        <script lang="javascript" src="libs/js-xlsx/dist/xlsx.core.min.js"></script>
+
+        <script src="libs/angular-route/angular-route.min.js"></script>
+        <script src="libs/angular-animate/angular-animate.min.js"></script>
+        <script src="libs/angular-aria/angular-aria.min.js"></script>
+        <script src="libs/angular-material/angular-material.min.js"></script>
+        <script type="text/javascript" src="libs/angular-ui-tree/dist/angular-ui-tree.js"></script>
+
+        <script type="text/javascript" src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+        <script type="text/javascript" src="libs/tv4/tv4.js"></script>
+        <script type="text/javascript" src="libs/objectpath/lib/ObjectPath.js"></script>
+        <script type="text/javascript" src="libs/angular-schema-form/dist/schema-form.min.js"></script>
+        <script type="text/javascript" src="libs/angular-schema-form/dist/bootstrap-decorator.min.js"></script>
+
+        <script src="libs/jquery/dist/jquery.min.js"></script>
+        <script src="custom-libs/color-picker/bootstrap-colorpicker-module.min.js"></script>
+        <!-- ANGULAR CUSTOM -->
+
+        <script src="js/controllers/MainCtrl.js"></script>
+        <script src="js/controllers/Ctrl.js"></script>
+        <script src="js/controllers/SignInCtrl.js"></script>
+        <script src="js/controllers/SplashCtrl.js"></script>
+
+        <script src="js/services/Service.js"></script>
+
+
+        <script src="js/appRoutes.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-app="sampleApp">
+        <div class="container-fluid" id="main-container">
+            <div ng-controller="MainController" layout="column" style="height:auto;">
+                <div ng-view>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
