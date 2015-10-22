@@ -101,7 +101,7 @@ PartnerServer.prototype.start = function () {
     if ('production' == env) {
         port = 7010;
     }else {
-        port = 7000;
+        port = 7010;
     }
 
     port = process.env.PORT || port;
