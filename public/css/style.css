@@ -285,7 +285,7 @@ md-input-container md-icon{
 }
 
 
-.content-height{
-    max-height: 480px;
-    overflow-x : scroll;
-}
+/*.content-height{*/
+    /*max-height: 480px;*/
+    /*overflow-x : scroll;*/
+/*}*/
