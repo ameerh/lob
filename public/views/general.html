@@ -29,19 +29,26 @@
             </div>
         </md-toolbar>
         <div layout="row" layout-wrap class="content-height">
-            <input type="file" id="files" ngf-select ng-model="files" accept=".csv">
-            <md-divider></md-divider>
-            <md-divider></md-divider>
-            <md-button class="md-raised md-primary" ng-disabled="!files"  ng-click="createPostCard()">
-                Submit
-            </md-button>
-
-            <div ng-repeat="postCard in postCards">
-                <img src="{{postCard.thumbnails[0].large}}">
-                <img src="{{postCard.thumbnails[1].large}}">
-                <br>
-                <a href="{{postCard.url}}" target="_blank">pdf</a>
+            <div layout="row">
+                <input type="file" id="files" ngf-select ng-model="files" accept=".csv">
+                <md-divider></md-divider>
+                <md-divider></md-divider>
+                <md-button class="md-raised md-primary" ng-disabled="!files"  ng-click="createPostCard()">
+                    Submit
+                </md-button>
             </div>
+
+
+
+                <div ng-repeat="postCard in postCards">
+                    <img src="{{postCard.thumbnails[0].large}}">
+                    <img src="{{postCard.thumbnails[1].large}}">
+                    <br>
+                    <a href="{{postCard.url}}" target="_blank">pdf</a>
+                    <!--<br>-->
+                </div>
+
+
         </div>
 
     </md-content>

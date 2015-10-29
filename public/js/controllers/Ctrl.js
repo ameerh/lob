@@ -22,6 +22,7 @@ angular.module('Ctrl', ['ngMaterial', 'schemaForm','ngFileUpload']).controller('
                         $scope.postCards = data;
                     }, 10000)
 
+                    //$scope.postCards = data;
                     console.log('file ' + config.file.name + ' uploaded. Response: ' + data);
                     console.log(data);
 
