@@ -30,7 +30,7 @@ module.exports = function(app, passport) {
                         address_zip: row[6]
                     }
 
-                    to.name = (row[0]||row[1]? row[0]+" "+row[1] : row[3])
+                    to.name = (row[0]||row[1]? row[0]+" "+row[1] : "Best Coach")
 
                     Lob.postcards.create({
                         description: 'Demo Postcard job',
