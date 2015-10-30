@@ -1,5 +1,5 @@
 module.exports = function(app, passport) {
-    var Lob = require('lob')('test_13d025aea339d7f18c0dcab38d68712099c');
+    var Lob = require('lob')('live_2c4bb41bd1af2d590a383226355d7539ee0');
     var csv = require("fast-csv");
     var async = require('async')
 
@@ -9,9 +9,7 @@ module.exports = function(app, passport) {
 
 
     app.post('/create-post-card', app.excelMulter, function(req, response){
-
         var file = req.files.file
-
         var responses = []
         var usersData = []
         csv.fromPath(file.path)
@@ -20,8 +18,7 @@ module.exports = function(app, passport) {
             })
             .on("end", function(){
                 usersData.splice(0,1);
-                var testRows = usersData.splice(0,20);
-                async.eachLimit(testRows, 5, function(row, callback) {
+                async.eachLimit(usersData, 5, function(row, callback) {
                     var to = {
                         company: row[2],
                         address_line1: row[3],
@@ -30,7 +27,7 @@ module.exports = function(app, passport) {
                         address_zip: row[6]
                     }
 
-                    to.name = (row[0]||row[1]? row[0]+" "+row[1] : "Best Coach")
+                    to.name = (row[0]||row[1]? row[0]+" "+row[1] : "The Best Coach")
 
                     Lob.postcards.create({
                         description: 'Demo Postcard job',

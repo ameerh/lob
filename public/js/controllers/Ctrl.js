@@ -4,6 +4,7 @@ angular.module('Ctrl', ['ngMaterial', 'schemaForm','ngFileUpload']).controller('
 
 
     $scope.createPostCard = function(){
+        $scope.showWaiting = true;
         var files=$scope.files;
         if (files && files.length) {
             for (var i = 0; i < files.length; i++) {
@@ -21,7 +22,7 @@ angular.module('Ctrl', ['ngMaterial', 'schemaForm','ngFileUpload']).controller('
                     $timeout(function(){
                         $scope.postCards = data;
                     }, 10000)
-
+                    $scope.showWaiting = false;
                     //$scope.postCards = data;
                     console.log('file ' + config.file.name + ' uploaded. Response: ' + data);
                     console.log(data);
