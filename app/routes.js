@@ -21,9 +21,10 @@ module.exports = function(app, passport) {
             .on("end", function(){
                 usersData.splice(0,1);
                 var testRows = usersData.splice(0,20);
-                async.each(testRows, function(row, callback) {
+                async.eachLimit(testRows, 5, function(row, callback) {
                     var to = {
-                        address_line1: row[2] + " " + row[3],
+                        company: row[2],
+                        address_line1: row[3],
                         address_city: row[4],
                         address_state: row[5],
                         address_zip: row[6]
