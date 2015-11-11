@@ -1,7 +1,36 @@
-angular.module('Ctrl', ['ngMaterial', 'schemaForm','ngFileUpload']).controller('Controller', function($scope, $mdToast, $rootScope, $timeout, $mdSidenav,$location, $mdDialog, Upload) {
+angular.module('Ctrl', ['ngMaterial', 'schemaForm','ngFileUpload']).controller('Controller', function($scope, $mdToast, $rootScope, $timeout, $mdSidenav,$location, $mdDialog, Service, Upload) {
 
 
 
+    $scope.getPostCards = function(){
+
+        if($scope.offSet && $scope.offSet != 0 && $scope.offSet % 100 != 0){
+            $scope.inValid = true;
+        }
+
+        else{
+            var offSet = $scope.offSet || 0;
+            $scope.showWaiting = true;
+            $scope.inValid = false;
+            Service.getPostCards(offSet, function(data){
+                    console.log(data)
+                    $scope.postCards = data.data;
+                    if($scope.postCards.length ==0){
+                        $scope.noResult = true;
+                        $timeout(function(){
+                            $scope.noResult = false;
+                        }, 5000)
+                    }
+                    console.log($scope.postCards)
+                    $scope.showWaiting = false;
+                },
+                function(err){
+                    console.log(err)
+                    $scope.showWaiting = false;
+                })
+        }
+
+    }
 
     $scope.createPostCard = function(){
         $scope.showWaiting = true;

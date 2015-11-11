@@ -12,11 +12,11 @@
             <div flex>
                 <h2 class="md-toolbar-tools">
                     <div class="md-title">
-                        <span>Post</span>
+                        <span>List</span>
                         <span style="transform: translate3d(0, 1px, 0)">
                             <img ng-if="branding.fontColor == 'black'" src="../../../images/breadcrumb_arrow_black.png" height="25px" alt="" aria-hidden="true">       <img ng-if="branding.fontColor != 'black'" src="../../../images/breadcrumb_arrow.png" height="25px" alt="" aria-hidden="true">
                         </span>
-                        <span>Upload Users Data</span>
+                        <span>Postcards</span>
                     </div>
                 </h2>
             </div>
@@ -29,14 +29,35 @@
             </div>
         </md-toolbar>
         <div layout="row" layout-wrap class="content-height">
-            <div layout="row">
-                <input type="file" id="files" ngf-select ng-model="files" accept=".csv">
-                <md-divider></md-divider>
-                <md-divider></md-divider>
-                <md-button class="md-raised md-primary" ng-disabled="!files"  ng-click="createPostCard()">
-                    Submit
+            <!--<div layout="row">-->
+                <!--<input type="file" id="files" ngf-select ng-model="files" accept=".csv">-->
+                <!--<md-divider></md-divider>-->
+                <!--<md-divider></md-divider>-->
+                <!--<md-button class="md-raised md-primary" ng-disabled="!files"  ng-click="createPostCard()">-->
+                    <!--Submit-->
+                <!--</md-button>-->
+            <!--</div>-->
+
+            <form name="postCardForm" novalidate>
+
+                <div layout="row">
+                    <md-input-container>
+                        <label >Offset (Multiple of 100)</label>
+                        <input type="number" ng-model="offSet">
+                    </md-input-container>
+                </div>
+                <div ng-show="inValid" style="color:red">
+                    Enter multiple of 100, 0 or leave blank
+                </div>
+                <md-button class="md-raised md-primary"  ng-click="getPostCards()">
+                    Get
                 </md-button>
-            </div>
+
+
+                <div ng-show="noResult" style="color:green">
+                    No Results
+                </div>
+            </form>
 
             <div layout="row" layout-sm="column" layout-align="space-around">
                 <md-progress-circular md-mode="indeterminate" ng-show="showWaiting"></md-progress-circular>
@@ -47,9 +68,24 @@
                 <div ng-repeat="postCard in postCards">
                     <img src="{{postCard.thumbnails[0].large}}">
                     <img src="{{postCard.thumbnails[1].large}}">
+                    <md-divider></md-divider>
+                    <a href="{{postCard.url}}" style="color:blue" target="_blank">PDF link</a>
+                    <div>
+                        Date Created: {{postCard.date_created}}
+                    </div>
+                    <div>
+                        Expected Delivery Date: {{postCard.expected_delivery_date}}
+                    </div>
+                    <div>
+                        ID: {{postCard.id}}
+                    </div>
+                    <div>
+                        Carrier: {{postCard.tracking.carrier}}
+                    </div>
+                    <div>
+                        Tracking number: {{postCard.tracking.tracking_number}}
+                    </div>
                     <br>
-                    <a href="{{postCard.url}}" target="_blank">pdf</a>
-                    <!--<br>-->
                 </div>
 
 

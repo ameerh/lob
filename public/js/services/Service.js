@@ -9,6 +9,16 @@ angular.module('Service', []).factory('Service', ['$http', function($http) {
                 error(function(data){
                     error(data);
                 });
+        },
+
+        getPostCards : function(offSet, success,error){
+            $http.get('/get-post-cards-list/'+offSet).
+                success(function(data){
+                    success(data)
+                }).
+                error(function(data){
+                    error(data);
+                });
         }
     }
 

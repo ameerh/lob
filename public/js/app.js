@@ -1,4 +1,4 @@
-angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'Ctrl', 'SignInCtrl', 'SplashCtrl']);
+angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'Service', 'Ctrl', 'SignInCtrl', 'SplashCtrl']);
 
 
 
