@@ -29,35 +29,35 @@
             </div>
         </md-toolbar>
         <div layout="row" layout-wrap class="content-height">
-            <!--<div layout="row">-->
-                <!--<input type="file" id="files" ngf-select ng-model="files" accept=".csv">-->
-                <!--<md-divider></md-divider>-->
-                <!--<md-divider></md-divider>-->
-                <!--<md-button class="md-raised md-primary" ng-disabled="!files"  ng-click="createPostCard()">-->
-                    <!--Submit-->
-                <!--</md-button>-->
-            <!--</div>-->
-
-            <form name="postCardForm" novalidate>
-
-                <div layout="row">
-                    <md-input-container>
-                        <label >Offset (Multiple of 100)</label>
-                        <input type="number" ng-model="offSet">
-                    </md-input-container>
-                </div>
-                <div ng-show="inValid" style="color:red">
-                    Enter multiple of 100, 0 or leave blank
-                </div>
-                <md-button class="md-raised md-primary"  ng-click="getPostCards()">
-                    Get
+            <div layout="row">
+                <input type="file" id="files" ngf-select ng-model="files" accept=".csv">
+                <md-divider></md-divider>
+                <md-divider></md-divider>
+                <md-button class="md-raised md-primary" ng-disabled="!files"  ng-click="createPostCard()">
+                    Submit
                 </md-button>
+            </div>
+
+            <!--<form name="postCardForm" novalidate>-->
+
+                <!--<div layout="row">-->
+                    <!--<md-input-container>-->
+                        <!--<label >Offset (Multiple of 100)</label>-->
+                        <!--<input type="number" ng-model="offSet">-->
+                    <!--</md-input-container>-->
+                <!--</div>-->
+                <!--<div ng-show="inValid" style="color:red">-->
+                    <!--Enter multiple of 100, 0 or leave blank-->
+                <!--</div>-->
+                <!--<md-button class="md-raised md-primary"  ng-click="getPostCards()">-->
+                    <!--Get-->
+                <!--</md-button>-->
 
 
-                <div ng-show="noResult" style="color:green">
-                    No Results
-                </div>
-            </form>
+                <!--<div ng-show="noResult" style="color:green">-->
+                    <!--No Results-->
+                <!--</div>-->
+            <!--</form>-->
 
             <div layout="row" layout-sm="column" layout-align="space-around">
                 <md-progress-circular md-mode="indeterminate" ng-show="showWaiting"></md-progress-circular>

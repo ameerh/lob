@@ -15,6 +15,8 @@ angular.module('Ctrl', ['ngMaterial', 'schemaForm','ngFileUpload']).controller('
             Service.getPostCards(offSet, function(data){
                     console.log(data)
                     $scope.postCards = data.data;
+
+                    console.log(JSON.stringify($scope.postCards, null, 7    ))
                     if($scope.postCards.length ==0){
                         $scope.noResult = true;
                         $timeout(function(){
