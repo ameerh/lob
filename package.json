@@ -1,6 +1,7 @@
 {
   "name": "boilerplate",
-  "main": "app.js",
+  "version": "0.0.1",
+  "private": true,
   "dependencies": {
     "async": "^1.4.2",
     "bcrypt-nodejs": "latest",
